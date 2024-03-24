@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.lyzsolar.ajalcafe.controllers.HomeController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.homeController">
+   <children>
+      <AnchorPane prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #41B8D5; -fx-border-color: #000000;">
+         <children>
+            <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="35.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="320.0" prefHeight="100.0" prefWidth="320.0" style="-fx-border-color: #8F8E8E;">
+         <children>
+            <Label layoutX="95.0" layoutY="37.0" text="¡BIENVENIDO!" textFill="#0097b2">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ComboBox fx:id="usuarioCombobox" editable="true" layoutX="379.0" layoutY="184.0" prefHeight="30.0" prefWidth="202.0" promptText="Usuario" style="-fx-border-color: #B8B9BB;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.10196078568696976" green="0.6431372761726379" blue="0.7803921699523926" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ComboBox>
+      <TextField fx:id="contraseñaTxt" layoutX="379.0" layoutY="272.0" prefHeight="30.0" prefWidth="202.0" promptText="Contraseña" style="-fx-border-color: #B8B9BB;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.10196078568696976" green="0.6431372761726379" blue="0.7803921699523926" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <Button fx:id="IngresarButton" layoutX="431.0" layoutY="356.0" mnemonicParsing="false" onAction="#ingresar_App" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #0097B2;" text="Ingresar" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

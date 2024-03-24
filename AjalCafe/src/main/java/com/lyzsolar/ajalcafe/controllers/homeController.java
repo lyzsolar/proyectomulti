@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class loginController {
+public class homeController {
 
     @FXML
     private ResourceBundle resources;
@@ -32,9 +32,9 @@ public class loginController {
 
     @FXML
     void initialize() {
-        assert IngresarButton != null : "fx:id=\"IngresarButton\" was not injected: check your FXML file 'login-view.fxml'.";
-        assert contraseñaTxt != null : "fx:id=\"contraseñaTxt\" was not injected: check your FXML file 'login-view.fxml'.";
-        assert usuarioCombobox != null : "fx:id=\"usuarioCombobox\" was not injected: check your FXML file 'login-view.fxml'.";
+        assert IngresarButton != null : "fx:id=\"IngresarButton\" was not injected: check your FXML file 'Home-view.fxml'.";
+        assert contraseñaTxt != null : "fx:id=\"contraseñaTxt\" was not injected: check your FXML file 'Home-view.fxml'.";
+        assert usuarioCombobox != null : "fx:id=\"usuarioCombobox\" was not injected: check your FXML file 'Home-view.fxml'.";
 
     }
 

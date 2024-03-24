@@ -11,13 +11,14 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Home-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        stage.setTitle("Ajal Café");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
+
         launch();
     }
 }
