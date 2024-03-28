@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.adminController">
    <children>
       <AnchorPane prefHeight="480.0" prefWidth="156.0" style="-fx-background-color: #41B8D5; -fx-border-color: #2B2B2B;">
@@ -46,40 +47,30 @@
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="productoButton" layoutX="275.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedProductoButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Producto">
+      <Button fx:id="productoButton" layoutX="275.0" layoutY="193.0" mnemonicParsing="false" onAction="#abrirProducto" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Producto">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="menuButton" layoutX="275.0" layoutY="218.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedMenuButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Menú">
+      <Button fx:id="menuButton" layoutX="275.0" layoutY="232.0" mnemonicParsing="false" onAction="#abirMenu" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Menú">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="pedidoButton" layoutX="275.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedPedidoButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Pedido">
+      <Button fx:id="pedidoButton" layoutX="275.0" layoutY="273.0" mnemonicParsing="false" onAction="#abiriPedido" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Pedido">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="ventaButton" layoutX="275.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVentasButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Ventas">
+      <Button fx:id="ventaButton" layoutX="275.0" layoutY="314.0" mnemonicParsing="false" onAction="#abrirVenta" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Ventas">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="reporteButton" layoutX="275.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedReporteButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Reporte">
+      <Button fx:id="reporteButton" layoutX="275.0" layoutY="356.0" mnemonicParsing="false" onAction="#abiriReporte" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Reporte">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="cerrarButton" layoutX="337.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedCerrarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="CERRAR" textFill="WHITE">
-         <font>
-            <Font name="Century Gothic" size="14.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="439.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/candado-abierto.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

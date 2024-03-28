@@ -2,11 +2,11 @@ package com.lyzsolar.ajalcafe.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class homeController {
 
@@ -26,7 +26,7 @@ public class homeController {
     private ComboBox<?> usuarioCombobox;
 
     @FXML
-    void ingresar_App(ActionEvent event) {
+    void OnMouseclickedIngresarButton(MouseEvent event) {
 
     }
 
@@ -39,4 +39,5 @@ public class homeController {
     }
 
 }
+
 
