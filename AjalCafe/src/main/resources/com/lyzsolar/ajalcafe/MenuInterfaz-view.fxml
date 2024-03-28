@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.lyzsolar.ajalcafe.controllers.menuInterfazController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.menuInterfazController">
+   <children>
+      <AnchorPane prefHeight="480.0" prefWidth="156.0" style="-fx-background-color: #41B8D5; -fx-border-color: #2B2B2B;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="2.0" layoutY="122.0" prefHeight="29.0" prefWidth="150.0" style="-fx-border-color: #74371D;">
+               <children>
+                  <Label layoutX="54.0" layoutY="3.0" text="Menú" textAlignment="CENTER" textFill="#2b2929">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="39.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/menu-de-cafe.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="156.0" prefHeight="122.0" prefWidth="485.0" style="-fx-border-color: #8F8E8E;">
+         <children>
+            <Label layoutX="181.0" layoutY="38.0" text="¡MENÚ!" textFill="#0097b2">
+               <font>
+                  <Font name="Century Gothic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="276.0" layoutY="136.0" text="¡Bienvenido al Submenú Menú!" textAlignment="CENTER" textFill="#5b5a5a">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="agregarButton" layoutX="275.0" layoutY="218.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedAgregarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Agregar">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="modificarButton" layoutX="275.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedModificarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Modificar">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="eliminarButton" layoutX="275.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedEliminarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Eliminar">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="verButton" layoutX="275.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVerButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Ver">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="volverButton" layoutX="331.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVolverButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="VOLVER" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="440.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/regreso.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="302.0" layoutY="166.0" text="Seleccione una opción. " textAlignment="CENTER" textFill="#6b6969">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

@@ -18,10 +18,10 @@ public class ProductoInterfazController {
     private Button agregarButton;
 
     @FXML
-    private Button confirmarButton;
+    private Button eliminarButton;
 
     @FXML
-    private Button eliminarButton;
+    private Button modificarButton;
 
     @FXML
     private Button verButton;
@@ -35,12 +35,12 @@ public class ProductoInterfazController {
     }
 
     @FXML
-    void OnMouseclickedConfirmarButton(MouseEvent event) {
+    void OnMouseclickedEliminarButton(MouseEvent event) {
 
     }
 
     @FXML
-    void OnMouseclickedEliminarButton(MouseEvent event) {
+    void OnMouseclickedModificarButton(MouseEvent event) {
 
     }
 
@@ -57,12 +57,13 @@ public class ProductoInterfazController {
     @FXML
     void initialize() {
         assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert confirmarButton != null : "fx:id=\"confirmarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
         assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
+        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
         assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
         assert volverButton != null : "fx:id=\"volverButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
 
     }
 
 }
+
 
