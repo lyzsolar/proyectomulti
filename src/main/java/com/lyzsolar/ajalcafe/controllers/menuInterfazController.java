@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 
-public class ProductoInterfazController {
+public class menuInterfazController {
 
     @FXML
     private ResourceBundle resources;
@@ -18,6 +18,9 @@ public class ProductoInterfazController {
     private Button agregarButton;
 
     @FXML
+    private Button regresarButton;
+
+    @FXML
     private Button modificarButton;
 
     @FXML
@@ -25,9 +28,6 @@ public class ProductoInterfazController {
 
     @FXML
     private Button verButton;
-
-    @FXML
-    private Button regresarButton;
 
     @FXML
     void OnMouseclickedAgregarButton(MouseEvent event) {
@@ -56,11 +56,11 @@ public class ProductoInterfazController {
 
     @FXML
     void initialize() {
-        assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
+        assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
+        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
+        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
+        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
+        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
 
     }
 }

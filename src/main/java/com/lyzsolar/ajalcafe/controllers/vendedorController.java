@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 
-public class adminController {
+public class vendedorController {
 
     @FXML
     private ResourceBundle resources;
@@ -15,7 +15,7 @@ public class adminController {
     private URL location;
 
     @FXML
-    private Button productoButton;
+    private Button cerrarButton;
 
     @FXML
     private Button menuButton;
@@ -24,13 +24,13 @@ public class adminController {
     private Button pedidoButton;
 
     @FXML
-    private Button ventaButton;
+    private Button productoButton;
 
     @FXML
     private Button reporteButton;
 
     @FXML
-    private Button cerrarButton;
+    private Button ventaButton;
 
     @FXML
     void OnMouseclickedCerrarButton(MouseEvent event) {
@@ -64,12 +64,15 @@ public class adminController {
 
     @FXML
     void initialize() {
-        assert productoButton != null : "fx:id=\"productoButton\" was not injected: check your FXML file 'Admin-view.fxml'.";
-        assert menuButton != null : "fx:id=\"menuButton\" was not injected: check your FXML file 'Admin-view.fxml'.";
-        assert pedidoButton != null : "fx:id=\"pedidoButton\" was not injected: check your FXML file 'Admin-view.fxml'.";
-        assert ventaButton != null : "fx:id=\"ventaButton\" was not injected: check your FXML file 'Admin-view.fxml'.";
-        assert reporteButton != null : "fx:id=\"reporteButton\" was not injected: check your FXML file 'Admin-view.fxml'.";
-        assert cerrarButton != null : "fx:id=\"cerrarButton\" was not injected: check your FXML file 'Admin-view.fxml'.";
+        assert cerrarButton != null : "fx:id=\"cerrarButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
+        assert menuButton != null : "fx:id=\"menuButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
+        assert pedidoButton != null : "fx:id=\"pedidoButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
+        assert productoButton != null : "fx:id=\"productoButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
+        assert reporteButton != null : "fx:id=\"reporteButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
+        assert ventaButton != null : "fx:id=\"ventaButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
 
     }
+
 }
+
+

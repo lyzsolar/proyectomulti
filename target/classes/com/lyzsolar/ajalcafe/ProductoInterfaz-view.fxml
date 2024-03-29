@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.ProductoInterfazController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.ProductoInterfazController">
    <children>
       <AnchorPane prefHeight="480.0" prefWidth="156.0" style="-fx-background-color: #41B8D5; -fx-border-color: #2B2B2B;">
          <children>
@@ -41,37 +41,42 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="agregarButton" layoutX="275.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedAgregarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2; -fx-border-radius: 5;" text="Agregar">
+      <Label layoutX="268.0" layoutY="136.0" text="¡Bienvenido al Submenú Producto!" textAlignment="CENTER" textFill="#5b5a5a">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="agregarButton" layoutX="275.0" layoutY="218.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedAgregarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Agregar">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="modificarButton" layoutX="275.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedModificarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2; -fx-border-radius: 5;" text="Modificar">
+      <Button fx:id="modificarButton" layoutX="275.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedModificarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Modificar">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="eliminarButton" layoutX="275.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedEliminarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2; -fx-border-radius: 5;" text="Eliminar">
+      <Button fx:id="eliminarButton" layoutX="275.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedEliminarButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Eliminar">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="verButton" layoutX="275.0" layoutY="319.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVerButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2; -fx-border-radius: 5;" text="Ver">
+      <Button fx:id="verButton" layoutX="275.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVerButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2;" text="Ver">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="regresarButton" layoutX="331.0" layoutY="379.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedRegresarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2; -fx-border-radius: 5;" text="Regresar" textFill="WHITE">
+      <Button fx:id="volverButton" layoutX="331.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVolverButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="VOLVER" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="440.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="440.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/regreso.png" />
          </image>
       </ImageView>
-      <Label layoutX="309.0" layoutY="152.0" text="Seleccione una opción. " textAlignment="CENTER" textFill="#6b6969">
+      <Label layoutX="302.0" layoutY="166.0" text="Seleccione una opción. " textAlignment="CENTER" textFill="#6b6969">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>

@@ -2,11 +2,11 @@ package com.lyzsolar.ajalcafe.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class homeController {
 
@@ -20,23 +20,21 @@ public class homeController {
     private Button IngresarButton;
 
     @FXML
-    private TextField contraseñaTxt;
+    private PasswordField password;
 
     @FXML
-    private ComboBox<?> usuarioCombobox;
+    private TextField user;
 
     @FXML
-    void ingresar_App(ActionEvent event) {
+    void OnMouseclickedIngresarButton(MouseEvent event) {
 
     }
 
     @FXML
     void initialize() {
         assert IngresarButton != null : "fx:id=\"IngresarButton\" was not injected: check your FXML file 'Home-view.fxml'.";
-        assert contraseñaTxt != null : "fx:id=\"contraseñaTxt\" was not injected: check your FXML file 'Home-view.fxml'.";
-        assert usuarioCombobox != null : "fx:id=\"usuarioCombobox\" was not injected: check your FXML file 'Home-view.fxml'.";
+        assert password != null : "fx:id=\"password\" was not injected: check your FXML file 'Home-view.fxml'.";
+        assert user != null : "fx:id=\"user\" was not injected: check your FXML file 'Home-view.fxml'.";
 
     }
-
 }
-
