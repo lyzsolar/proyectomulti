@@ -1,10 +1,16 @@
 package com.lyzsolar.ajalcafe.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.lyzsolar.ajalcafe.App;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class vendedorController {
 
@@ -32,13 +38,26 @@ public class vendedorController {
     @FXML
     private Button ventaButton;
 
+    Stage producto = new Stage();
+    Stage menu = new Stage();
+    Stage pedido = new Stage();
+    Stage venta = new Stage();
+    Stage reporte = new Stage();
+
     @FXML
     void OnMouseclickedCerrarButton(MouseEvent event) {
+        Stage stage = (Stage) cerrarButton.getScene().getWindow();
+        stage.close();
 
     }
 
     @FXML
-    void OnMouseclickedMenuButton(MouseEvent event) {
+    void OnMouseclickedMenuButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("menuVendedor-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        menu.setTitle("Menú Vendedor");
+        menu.setScene(scene);
+        menu.show();
 
     }
 
@@ -74,5 +93,3 @@ public class vendedorController {
     }
 
 }
-
-
