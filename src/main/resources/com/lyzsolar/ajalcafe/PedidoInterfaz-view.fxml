@@ -58,7 +58,7 @@
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="282.0" layoutY="324.0" mnemonicParsing="false" onAction="#verButton" onMouseClicked="#OnMouseclickedVerButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2; -fx-border-radius: 5;" text="Ver">
+      <Button fx:id="verButton" layoutX="282.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVerButton" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2; -fx-border-radius: 5;" text="Ver">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
