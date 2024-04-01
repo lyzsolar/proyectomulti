@@ -53,16 +53,22 @@ public class vendedorController {
 
     @FXML
     void OnMouseclickedMenuButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("menuVendedor-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("MenuVendedor-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        menu.setTitle("Menú Vendedor");
+        menu.setTitle("Menú-Vendedor");
         menu.setScene(scene);
         menu.show();
 
     }
 
     @FXML
-    void OnMouseclickedPedidoButton(MouseEvent event) {
+    void OnMouseclickedPedidoButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PedidoInterfaz-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        pedido.setTitle("Pedido-Vendedor");
+        pedido.setScene(scene);
+        pedido.show();
+
 
     }
 
