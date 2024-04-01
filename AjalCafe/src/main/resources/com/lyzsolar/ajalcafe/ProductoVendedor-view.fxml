@@ -41,7 +41,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="verProductosButton" layoutX="253.0" layoutY="220.0" mnemonicParsing="false" onContextMenuRequested="#OnMouseclickedVerProductosButton" onMouseClicked="#OnMouseclickedVerButton" prefHeight="39.0" prefWidth="291.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2; -fx-border-radius: 5;" text="Ver Productos ">
+      <Button fx:id="verProductosButton" layoutX="253.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVerProductosButton" prefHeight="39.0" prefWidth="291.0" style="-fx-background-color: #85C8C9; -fx-border-color: #0097b2; -fx-border-radius: 5;" text="Ver Productos ">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>

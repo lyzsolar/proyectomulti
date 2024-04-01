@@ -4,7 +4,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 
 public class productoVendedorController {
@@ -27,12 +26,7 @@ public class productoVendedorController {
     }
 
     @FXML
-    void OnMouseclickedVerButton(MouseEvent event) {
-
-    }
-
-    @FXML
-    void OnMouseclickedVerProductosButton(ContextMenuEvent event) {
+    void OnMouseclickedVerProductosButton(MouseEvent event) {
 
     }
 
