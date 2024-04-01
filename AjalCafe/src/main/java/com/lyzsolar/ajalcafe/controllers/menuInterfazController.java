@@ -18,16 +18,16 @@ public class menuInterfazController {
     private Button agregarButton;
 
     @FXML
-    private Button eliminarButton;
+    private Button regresarButton;
 
     @FXML
     private Button modificarButton;
 
     @FXML
-    private Button verButton;
+    private Button eliminarButton;
 
     @FXML
-    private Button volverButton;
+    private Button verButton;
 
     @FXML
     void OnMouseclickedAgregarButton(MouseEvent event) {
@@ -45,23 +45,22 @@ public class menuInterfazController {
     }
 
     @FXML
-    void OnMouseclickedVerButton(MouseEvent event) {
+    void OnMouseclickedRegresarButton(MouseEvent event) {
 
     }
 
     @FXML
-    void OnMouseclickedVolverButton(MouseEvent event) {
+    void OnMouseclickedVerButton(MouseEvent event) {
 
     }
 
     @FXML
     void initialize() {
         assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
-        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
+        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
         assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
+        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
         assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
-        assert volverButton != null : "fx:id=\"volverButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
 
     }
-
 }
