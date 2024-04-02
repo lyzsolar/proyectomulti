@@ -70,7 +70,7 @@ public class vendedorController {
 
     @FXML
     void OnMouseclickedPedidoButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PedidoInterfaz-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PedidoVendedor-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         pedido.setTitle("Pedido-Vendedor");
         pedido.setScene(scene);
