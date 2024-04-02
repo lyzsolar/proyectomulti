@@ -90,9 +90,9 @@ public class vendedorController {
 
     @FXML
     void OnMouseclickedVentasButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VentasInterfaz-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VentasVendedor-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        venta.setTitle("Venta-Vendedor");
+        venta.setTitle("Ventas-Vendedor");
         venta.setScene(scene);
         venta.show();
 
