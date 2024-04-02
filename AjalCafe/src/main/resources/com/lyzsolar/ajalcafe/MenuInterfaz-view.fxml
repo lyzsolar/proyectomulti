@@ -24,7 +24,7 @@
             </ImageView>
             <ImageView fitHeight="116.0" fitWidth="120.0" layoutX="20.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/menu%20logo.png" />
+                  <Image url="@images/menu.png" />
                </image>
             </ImageView>
          </children>

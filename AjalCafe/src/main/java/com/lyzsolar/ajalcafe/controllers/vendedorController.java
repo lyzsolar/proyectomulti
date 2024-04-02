@@ -33,9 +33,6 @@ public class vendedorController {
     private Button productoButton;
 
     @FXML
-    private Button reporteButton;
-
-    @FXML
     private Button ventaButton;
 
     Stage producto = new Stage();
@@ -73,17 +70,21 @@ public class vendedorController {
     }
 
     @FXML
-    void OnMouseclickedProductoButton(MouseEvent event) {
-
+    void OnMouseclickedProductoButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ProductoVendedor-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        producto.setTitle("Producto-Vendedor");
+        producto.setScene(scene);
+        producto.show();
     }
 
     @FXML
-    void OnMouseclickedReporteButton(MouseEvent event) {
-
-    }
-
-    @FXML
-    void OnMouseclickedVentasButton(MouseEvent event) {
+    void OnMouseclickedVentasButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VentasInterfaz-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        venta.setTitle("Venta-Vendedor");
+        venta.setScene(scene);
+        venta.show();
 
     }
 
@@ -93,7 +94,6 @@ public class vendedorController {
         assert menuButton != null : "fx:id=\"menuButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert pedidoButton != null : "fx:id=\"pedidoButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert productoButton != null : "fx:id=\"productoButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
-        assert reporteButton != null : "fx:id=\"reporteButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert ventaButton != null : "fx:id=\"ventaButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
 
     }

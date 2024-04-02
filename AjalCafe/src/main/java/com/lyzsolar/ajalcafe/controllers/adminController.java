@@ -96,7 +96,7 @@ public class adminController {
     void OnMouseclickedVentasButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VentasInterfaz-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        venta.setTitle("Menú producto");
+        venta.setTitle("Menú Ventas");
         venta.setScene(scene);
         venta.show();
 
