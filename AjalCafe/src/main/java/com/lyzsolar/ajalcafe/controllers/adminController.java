@@ -95,7 +95,7 @@ public class adminController {
     void OnMouseclickedReporteButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ReporteInterfaz-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        reporte.setTitle("Menú producto");
+        reporte.setTitle("Menú Reporte");
         reporte.setScene(scene);
         reporte.show();
 
