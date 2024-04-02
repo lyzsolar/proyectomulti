@@ -72,7 +72,7 @@ public class menuInterfazController {
         callMenu.setTitle("Menu Administrador");
         callMenu.setScene(scene);
         callMenu.show();
-        Stage stage = (Stage) regresarButton.getScene().getWindow();
+        Stage stage = (Stage) regresarIcono.getScene().getWindow();
         stage.close();
 
     }

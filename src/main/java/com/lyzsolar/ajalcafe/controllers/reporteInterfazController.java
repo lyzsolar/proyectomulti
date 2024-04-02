@@ -1,10 +1,17 @@
 package com.lyzsolar.ajalcafe.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.lyzsolar.ajalcafe.App;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class reporteInterfazController {
 
@@ -15,16 +22,23 @@ public class reporteInterfazController {
     private URL location;
 
     @FXML
-    private Button cerrarButton2;
-
-    @FXML
     private Button generarReporteButton;
 
     @FXML
     private Button regresarButton;
 
     @FXML
+    private ImageView regresarIcono;
+
+    @FXML
+    private Button cerrarButton;
+    Stage callMenu = new Stage();
+
+    @FXML
     void OnMouseclickedCerrarButton(MouseEvent event) {
+        Stage stage = (Stage) cerrarButton.getScene().getWindow();
+        stage.close();
+
 
     }
 
@@ -34,16 +48,36 @@ public class reporteInterfazController {
     }
 
     @FXML
-    void OnMouseclickedRegresarButton(MouseEvent event) {
+    void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        callMenu.setTitle("Menu Administrador");
+        callMenu.setScene(scene);
+        callMenu.show();
+        Stage stage = (Stage) regresarButton.getScene().getWindow();
+        stage.close();
+
+    }
+
+    @FXML
+    void OnMouseclickedRegresarIcono(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        callMenu.setTitle("Menu Administrador");
+        callMenu.setScene(scene);
+        callMenu.show();
+        Stage stage = (Stage) regresarIcono.getScene().getWindow();
+        stage.close();
+
 
     }
 
     @FXML
     void initialize() {
-        assert cerrarButton2 != null : "fx:id=\"cerrarButton2\" was not injected: check your FXML file 'ReporteInterfaz-view.fxml'.";
         assert generarReporteButton != null : "fx:id=\"generarReporteButton\" was not injected: check your FXML file 'ReporteInterfaz-view.fxml'.";
         assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'ReporteInterfaz-view.fxml'.";
+        assert regresarIcono != null : "fx:id=\"regresarIcono\" was not injected: check your FXML file 'ReporteInterfaz-view.fxml'.";
+        assert cerrarButton != null : "fx:id=\"cerrarButton\" was not injected: check your FXML file 'ReporteInterfaz-view.fxml'.";
 
     }
-
 }
