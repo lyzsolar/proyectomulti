@@ -19,19 +19,19 @@ public class ventasInterfazController {
     private Button agregarButton;
 
     @FXML
-    private Button modificarButton;
+    private ImageView back;
 
     @FXML
     private Button eliminarButton;
 
     @FXML
-    private Button verButton;
+    private Button modificarButton;
 
     @FXML
     private Button regresarButton;
 
     @FXML
-    private ImageView back;
+    private Button verButton;
 
     @FXML
     void OnMouseclickedAgregarButton(MouseEvent event) {
@@ -66,11 +66,12 @@ public class ventasInterfazController {
     @FXML
     void initialize() {
         assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
-        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
-        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
-        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
-        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
         assert back != null : "fx:id=\"back\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
+        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
+        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
+        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
+        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'VentasInterfaz-view.fxml'.";
 
     }
+
 }

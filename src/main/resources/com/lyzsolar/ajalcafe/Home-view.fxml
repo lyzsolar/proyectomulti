@@ -30,7 +30,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="IngresarButton" layoutX="419.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedIngresarButton" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #0097B2; -fx-border-radius: 5;" text="Ingresar" textFill="WHITE">
+      <Button fx:id="IngresarButton" layoutX="416.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedIngresarButton" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #0097B2; -fx-border-radius: 5;" text="Ingresar" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>
@@ -40,12 +40,12 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </PasswordField>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="524.0" layoutY="356.0">
+      <ImageView fx:id="ingresarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="524.0" layoutY="356.0" onMouseClicked="#OnMouseclickedIngresarIcono">
          <image>
             <Image url="@images/candado-abierto.png" />
          </image>
       </ImageView>
-      <TextField fx:id="user" layoutX="378.0" layoutY="178.0" prefHeight="30.0" prefWidth="202.0" promptText="Usuario" style="-fx-border-color: #B8B9BB; -fx-background-radius: 5; border: ;">
+      <TextField fx:id="user" layoutX="378.0" layoutY="178.0" prefHeight="30.0" prefWidth="202.0" promptText="Usuario" style="-fx-border-color: #B8B9BB; -fx-background-radius: 5; border: 5">
          <effect>
             <DropShadow color="#1aa4c7" />
          </effect>
