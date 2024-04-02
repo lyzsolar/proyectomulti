@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -22,6 +23,9 @@ public class vendedorController {
 
     @FXML
     private Button cerrarButton;
+
+    @FXML
+    private ImageView cerrarIcono;
 
     @FXML
     private Button menuButton;
@@ -39,11 +43,17 @@ public class vendedorController {
     Stage menu = new Stage();
     Stage pedido = new Stage();
     Stage venta = new Stage();
-    Stage reporte = new Stage();
 
     @FXML
     void OnMouseclickedCerrarButton(MouseEvent event) {
         Stage stage = (Stage) cerrarButton.getScene().getWindow();
+        stage.close();
+
+    }
+
+    @FXML
+    void OnMouseclickedCerrarIcono(MouseEvent event) {
+        Stage stage = (Stage) cerrarIcono.getScene().getWindow();
         stage.close();
 
     }
@@ -91,6 +101,7 @@ public class vendedorController {
     @FXML
     void initialize() {
         assert cerrarButton != null : "fx:id=\"cerrarButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
+        assert cerrarIcono != null : "fx:id=\"cerrarIcono\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert menuButton != null : "fx:id=\"menuButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert pedidoButton != null : "fx:id=\"pedidoButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert productoButton != null : "fx:id=\"productoButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";

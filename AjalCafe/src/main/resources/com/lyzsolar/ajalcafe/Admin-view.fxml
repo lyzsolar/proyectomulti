@@ -76,7 +76,7 @@
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="439.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="cerrarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="439.0" layoutY="416.0" onMouseClicked="#OnMouseclickedCerrarIcono" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/candado-abierto.png" />
          </image>

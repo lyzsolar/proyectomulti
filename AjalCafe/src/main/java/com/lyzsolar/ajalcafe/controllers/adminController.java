@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -38,6 +39,8 @@ public class adminController {
 
     @FXML
     private Button cerrarButton;
+    @FXML
+    private ImageView cerrarIcono;
 
     Stage producto = new Stage();
     Stage pedido = new Stage();
@@ -48,6 +51,12 @@ public class adminController {
     @FXML
     void OnMouseclickedCerrarButton(MouseEvent event) {
         Stage stage = (Stage) cerrarButton.getScene().getWindow();
+        stage.close();
+
+    }
+    @FXML
+    void OnMouseclickedCerrarIcono(MouseEvent event) {
+        Stage stage = (Stage) cerrarIcono.getScene().getWindow();
         stage.close();
 
     }

@@ -1,10 +1,17 @@
 package com.lyzsolar.ajalcafe.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.lyzsolar.ajalcafe.App;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class ProductoInterfazController {
 
@@ -30,6 +37,12 @@ public class ProductoInterfazController {
     private Button regresarButton;
 
     @FXML
+    private ImageView regresarIcono;
+
+    Stage callMenu = new Stage();
+
+
+    @FXML
     void OnMouseclickedAgregarButton(MouseEvent event) {
 
     }
@@ -45,7 +58,25 @@ public class ProductoInterfazController {
     }
 
     @FXML
-    void OnMouseclickedRegresarButton(MouseEvent event) {
+    void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        callMenu.setTitle("Menu Administrador");
+        callMenu.setScene(scene);
+        callMenu.show();
+        Stage stage = (Stage) regresarButton.getScene().getWindow();
+        stage.close();
+        }
+
+    @FXML
+    void OnMouseclickedRegresarIcono(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        callMenu.setTitle("Menu Administrador");
+        callMenu.setScene(scene);
+        callMenu.show();
+        Stage stage = (Stage) regresarIcono.getScene().getWindow();
+        stage.close();
 
     }
 
