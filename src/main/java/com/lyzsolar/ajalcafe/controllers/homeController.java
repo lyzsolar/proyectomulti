@@ -34,9 +34,9 @@ public class homeController {
     private PasswordField password;
     Usuario administrador = new Usuario();
     Usuario vendedor = new Usuario();
-    Stage callMenu = new Stage();
+    Stage vistaMenuAdministrador = new Stage();
 
-    Stage menuVendedor = new Stage();
+    Stage vistaMenuVendedor = new Stage();
     @FXML
     private TextField user;
 
@@ -51,15 +51,15 @@ public class homeController {
             if (nombreUsuario.equals(administrador.getUsuario()) && contrasena.equals(administrador.getContrasena())){
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
-                callMenu.setTitle("Menu Administrador");
-                callMenu.setScene(scene);
-                callMenu.show();
+                vistaMenuAdministrador.setTitle("Menu Administrador");
+                vistaMenuAdministrador.setScene(scene);
+                vistaMenuAdministrador.show();
             } else if (nombreUsuario.equals(vendedor.getUsuario2()) && contrasena.equals(vendedor.getContrasena2())){
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Vendedor_view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
-                menuVendedor.setTitle("Menu Vendedor");
-                menuVendedor.setScene(scene);
-                menuVendedor.show();
+                vistaMenuVendedor.setTitle("Menu Vendedor");
+                vistaMenuVendedor.setScene(scene);
+                vistaMenuVendedor.show();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -76,15 +76,15 @@ public class homeController {
             if (nombreUsuario.equals(administrador.getUsuario()) && contrasena.equals(administrador.getContrasena())){
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
-                callMenu.setTitle("Menu Administrador");
-                callMenu.setScene(scene);
-                callMenu.show();
+                vistaMenuAdministrador.setTitle("Menu Administrador");
+                vistaMenuAdministrador.setScene(scene);
+                vistaMenuAdministrador.show();
             } else if (nombreUsuario.equals(vendedor.getUsuario2()) && contrasena.equals(vendedor.getContrasena2())){
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Vendedor_view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
-                menuVendedor.setTitle("Menu Vendedor");
-                menuVendedor.setScene(scene);
-                menuVendedor.show();
+                vistaMenuVendedor.setTitle("Menu Vendedor");
+                vistaMenuVendedor.setScene(scene);
+                vistaMenuVendedor.show();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

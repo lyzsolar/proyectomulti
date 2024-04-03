@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -24,6 +25,9 @@ public class vendedorController {
     private Button cerrarButton;
 
     @FXML
+    private ImageView cerrarIcono;
+
+    @FXML
     private Button menuButton;
 
     @FXML
@@ -35,11 +39,10 @@ public class vendedorController {
     @FXML
     private Button ventaButton;
 
-    Stage producto = new Stage();
-    Stage menu = new Stage();
-    Stage pedido = new Stage();
-    Stage venta = new Stage();
-    Stage reporte = new Stage();
+    Stage vistaProductoVendedor = new Stage();
+    Stage vistaMenuVendedor = new Stage();
+    Stage vistaPedidoVendedor = new Stage();
+    Stage vistaVentaVendedor = new Stage();
 
     @FXML
     void OnMouseclickedCerrarButton(MouseEvent event) {
@@ -49,22 +52,29 @@ public class vendedorController {
     }
 
     @FXML
+    void OnMouseclickedCerrarIcono(MouseEvent event) {
+        Stage stage = (Stage) cerrarIcono.getScene().getWindow();
+        stage.close();
+
+    }
+
+    @FXML
     void OnMouseclickedMenuButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("MenuVendedor-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        menu.setTitle("Menú-Vendedor");
-        menu.setScene(scene);
-        menu.show();
+        vistaMenuVendedor.setTitle("Menú-Vendedor");
+        vistaMenuVendedor.setScene(scene);
+        vistaMenuVendedor.show();
 
     }
 
     @FXML
     void OnMouseclickedPedidoButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PedidoInterfaz-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PedidoVendedor-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        pedido.setTitle("Pedido-Vendedor");
-        pedido.setScene(scene);
-        pedido.show();
+        vistaPedidoVendedor.setTitle("Pedido-Vendedor");
+        vistaPedidoVendedor.setScene(scene);
+        vistaPedidoVendedor.show();
 
 
     }
@@ -73,24 +83,25 @@ public class vendedorController {
     void OnMouseclickedProductoButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ProductoVendedor-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        producto.setTitle("Producto-Vendedor");
-        producto.setScene(scene);
-        producto.show();
+        vistaProductoVendedor.setTitle("Producto-Vendedor");
+        vistaProductoVendedor.setScene(scene);
+        vistaProductoVendedor.show();
     }
 
     @FXML
     void OnMouseclickedVentasButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VentasInterfaz-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VentasVendedor-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        venta.setTitle("Venta-Vendedor");
-        venta.setScene(scene);
-        venta.show();
+        vistaVentaVendedor.setTitle("Ventas-Vendedor");
+        vistaVentaVendedor.setScene(scene);
+        vistaVentaVendedor.show();
 
     }
 
     @FXML
     void initialize() {
         assert cerrarButton != null : "fx:id=\"cerrarButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
+        assert cerrarIcono != null : "fx:id=\"cerrarIcono\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert menuButton != null : "fx:id=\"menuButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert pedidoButton != null : "fx:id=\"pedidoButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";
         assert productoButton != null : "fx:id=\"productoButton\" was not injected: check your FXML file 'Vendedor_view.fxml'.";

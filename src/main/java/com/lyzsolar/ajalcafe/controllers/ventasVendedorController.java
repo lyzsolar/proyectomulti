@@ -13,7 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-public class ventasInterfazController {
+public class ventasVendedorController {
 
     @FXML
     private ResourceBundle resources;
@@ -38,21 +38,20 @@ public class ventasInterfazController {
 
     @FXML
     private Button verButton;
-    Stage vistaMenuAdministrador = new Stage();
+    Stage vistaMenuVendedor = new Stage();
 
     @FXML
     void OnMouseclickedAgregarButton(MouseEvent event) {
 
     }
 
-
     @FXML
     void OnMouseclickedBackIcono(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Vendedor_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        vistaMenuAdministrador.setTitle("Menu Administrador");
-        vistaMenuAdministrador.setScene(scene);
-        vistaMenuAdministrador.show();
+        vistaMenuVendedor.setTitle("Menu Vendedor");
+        vistaMenuVendedor.setScene(scene);
+        vistaMenuVendedor.show();
         Stage stage = (Stage) backIcono.getScene().getWindow();
         stage.close();
 
@@ -70,11 +69,11 @@ public class ventasInterfazController {
 
     @FXML
     void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Vendedor_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        vistaMenuAdministrador.setTitle("Menu Administrador");
-        vistaMenuAdministrador.setScene(scene);
-        vistaMenuAdministrador.show();
+        vistaMenuVendedor.setTitle("Menu Vendedor");
+        vistaMenuVendedor.setScene(scene);
+        vistaMenuVendedor.show();
         Stage stage = (Stage) regresarButton.getScene().getWindow();
         stage.close();
 
@@ -87,6 +86,13 @@ public class ventasInterfazController {
 
     @FXML
     void initialize() {
+        assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'VentasVendedor-view.fxml'.";
+        assert backIcono != null : "fx:id=\"backIcono\" was not injected: check your FXML file 'VentasVendedor-view.fxml'.";
+        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'VentasVendedor-view.fxml'.";
+        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'VentasVendedor-view.fxml'.";
+        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'VentasVendedor-view.fxml'.";
+        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'VentasVendedor-view.fxml'.";
+
     }
 
 }

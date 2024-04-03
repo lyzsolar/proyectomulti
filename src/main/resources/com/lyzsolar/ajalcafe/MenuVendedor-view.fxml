@@ -43,7 +43,7 @@
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="446.0" layoutY="397.0">
+      <ImageView fx:id="regresarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="446.0" layoutY="397.0" onMouseClicked="#OnMouseclickedRegresarIcono">
          <image>
             <Image url="@images/regreso.png" />
          </image>

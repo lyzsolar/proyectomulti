@@ -13,7 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-public class menuVendedorController {
+public class PedidoVendedorController {
 
     @FXML
     private ResourceBundle resources;
@@ -22,17 +22,39 @@ public class menuVendedorController {
     private URL location;
 
     @FXML
-    private Button regresarButton;
+    private Button agregarButton;
 
+    @FXML
+    private Button eliminarButton;
+
+    @FXML
+    private Button modificarButton;
+
+    @FXML
+    private Button regresarButton;
 
     @FXML
     private ImageView regresarIcono;
 
-
     @FXML
-    private Button verMenuButton;
+    private Button verButton;
 
     Stage vistaMenuVendedor = new Stage();
+
+    @FXML
+    void OnMouseclickedAgregarButton(MouseEvent event) {
+
+    }
+
+    @FXML
+    void OnMouseclickedEliminarButton(MouseEvent event) {
+
+    }
+
+    @FXML
+    void OnMouseclickedModificarButton(MouseEvent event) {
+
+    }
 
     @FXML
     void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
@@ -47,7 +69,7 @@ public class menuVendedorController {
     }
 
     @FXML
-    void OnMouseclickedRegresarIcono(MouseEvent event) throws IOException {
+    void OnMouseclickedRegresarIcono(MouseEvent event) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Vendedor_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         vistaMenuVendedor.setTitle("Menu Vendedor");
@@ -59,17 +81,19 @@ public class menuVendedorController {
     }
 
     @FXML
-    void OnMouseclickedVerMenuButton(MouseEvent event) {
+    void OnMouseclickedVerButton(MouseEvent event) {
 
     }
 
     @FXML
     void initialize() {
-        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'MenuVendedor-view.fxml'.";
-        assert regresarIcono != null : "fx:id=\"regresarIcono\" was not injected: check your FXML file 'MenuVendedor-view.fxml'.";
-        assert verMenuButton != null : "fx:id=\"verMenuButton\" was not injected: check your FXML file 'MenuVendedor-view.fxml'.";
+        assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'PedidoVendedor-view.fxml'.";
+        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'PedidoVendedor-view.fxml'.";
+        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'PedidoVendedor-view.fxml'.";
+        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'PedidoVendedor-view.fxml'.";
+        assert regresarIcono != null : "fx:id=\"regresarIcono\" was not injected: check your FXML file 'PedidoVendedor-view.fxml'.";
+        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'PedidoVendedor-view.fxml'.";
 
     }
 
 }
-
