@@ -40,11 +40,18 @@ public class ProductoInterfazController {
     private ImageView regresarIcono;
 
     Stage vistaMenuAdministrador = new Stage();
+    Stage AddProducto = new Stage();
 
 
     @FXML
-    void OnMouseclickedAgregarButton(MouseEvent event) {
-
+    void OnMouseclickedAgregarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("AgregarProducto-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        AddProducto.setTitle("Submenú Agregar Producto");
+        AddProducto.setScene(scene);
+        AddProducto.show();
+        Stage stage = (Stage) regresarButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

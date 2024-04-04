@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.ModificarProductoController">
+   <children>
+      <AnchorPane prefHeight="480.0" prefWidth="156.0" style="-fx-background-color: #41b8d5; -fx-border-color: #2b2b2b;">
+         <children>
+            <TextField alignment="CENTER" layoutX="4.0" layoutY="155.0" prefHeight="10.0" prefWidth="156.0" style="-fx-background-color: #41b8d5; -fx-border-color: #74371d;" text="Producto">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="159.0" prefHeight="122.0" prefWidth="482.0" style="-fx-border-color: #8e8e8e;">
+         <children>
+            <Text fill="#0097b2" layoutX="58.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡ Modificar Producto !" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="28.0" layoutY="14.0">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

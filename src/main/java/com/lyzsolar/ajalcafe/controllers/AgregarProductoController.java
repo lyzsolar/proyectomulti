@@ -2,7 +2,12 @@ package com.lyzsolar.ajalcafe.controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.ResourceBundle;
+
+import com.lyzsolar.ajalcafe.models.Gerencia;
+import com.lyzsolar.ajalcafe.models.Producto;
 
 import com.lyzsolar.ajalcafe.App;
 import javafx.fxml.FXML;
@@ -35,24 +40,23 @@ public class AgregarProductoController {
     private ImageView regresarIcono;
 
     @FXML
-    private TextField idProducto;
+    private TextField idText;
 
     @FXML
-    private TextField nombreProducto;
+    private TextField nombreText;
+    @FXML
+    private TextField categoriaText;
 
     @FXML
-    private TextField tipoProducto;
+    private TextField caducidadText;
 
     @FXML
-    private TextField caducidadProducto;
+    private TextField cantidadText;
 
     @FXML
-    private TextField cantidadProducto;
-
+    private TextField precioText;
     @FXML
-    private TextField precioProducto;
-    @FXML
-    private TextField unidadProducto;
+    private TextField unidadText;
 
     Stage vistaProducto = new Stage();
 
@@ -89,21 +93,6 @@ public class AgregarProductoController {
             stage.close();
 
         }
-    @FXML
-    void initialize() {
-        assert guardarbutton != null : "fx:id=\"guardarbutton\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert guardarIcono != null : "fx:id=\"guardarIcono\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert regresarIcono != null : "fx:id=\"regresarIcono\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert idProducto != null : "fx:id=\"idProducto\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert nombreProducto != null : "fx:id=\"nombreProducto\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert tipoProducto != null : "fx:id=\"tipoProducto\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert caducidadProducto != null : "fx:id=\"caducidadProducto\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert cantidadProducto != null : "fx:id=\"cantidadProducto\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert precioProducto != null : "fx:id=\"precioProducto\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-        assert unidadProducto != null : "fx:id=\"unidadProducto\" was not injected: check your FXML file 'AgregarProducto-view.fxml'.";
-
-    }
 }
 
 

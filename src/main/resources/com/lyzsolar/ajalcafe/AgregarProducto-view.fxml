@@ -63,7 +63,7 @@
             <Image url="@images/regreso.png" />
          </image>
       </ImageView>
-      <TextField fx:id="idProducto" alignment="CENTER" cache="true" layoutX="257.0" layoutY="164.0" prefHeight="30.0" prefWidth="309.0" promptText="Id" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="idText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="164.0" prefHeight="30.0" prefWidth="309.0" promptText="Id" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -71,7 +71,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="nombreProducto" alignment="CENTER" cache="true" layoutX="257.0" layoutY="201.0" prefHeight="30.0" prefWidth="309.0" promptText="Nombre" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="nombreText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="201.0" prefHeight="30.0" prefWidth="309.0" promptText="Nombre" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -79,7 +79,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="tipoProducto" alignment="CENTER" cache="true" layoutX="257.0" layoutY="238.0" prefHeight="30.0" prefWidth="309.0" promptText="Tipo" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="categoriaText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="238.0" prefHeight="30.0" prefWidth="309.0" promptText="Categoria" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -87,7 +87,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="caducidadProducto" alignment="CENTER" cache="true" layoutX="257.0" layoutY="275.0" prefHeight="30.0" prefWidth="309.0" promptText="Caducidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="caducidadText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="275.0" prefHeight="30.0" prefWidth="309.0" promptText="Caducidad (yyyy-mm-dd)" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -95,7 +95,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="cantidadProducto" alignment="CENTER" cache="true" layoutX="257.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" promptText="Cantidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="cantidadText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" promptText="Cantidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -103,7 +103,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="precioProducto" alignment="CENTER" cache="true" layoutX="257.0" layoutY="349.0" prefHeight="30.0" prefWidth="309.0" promptText="Precio" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="precioText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="349.0" prefHeight="30.0" prefWidth="309.0" promptText="Precio" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -111,7 +111,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="unidadProducto" alignment="CENTER" cache="true" layoutX="415.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" promptText="Unidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="unidadText" alignment="CENTER" cache="true" layoutX="415.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" promptText="Unidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
