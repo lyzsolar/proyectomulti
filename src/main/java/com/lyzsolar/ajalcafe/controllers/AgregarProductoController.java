@@ -13,6 +13,7 @@ import com.lyzsolar.ajalcafe.App;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -62,12 +63,64 @@ public class AgregarProductoController {
 
     @FXML
     void OnMouseclickedGuardarButton(MouseEvent event) {
+        try {
+            Integer idProducto = Integer.valueOf(idText.getText());
+            String nombreProducto = nombreText.getText();
+            String categoria = categoriaText.getText();
+            LocalDate fechacaducidad = LocalDate.parse(caducidadText.getText());
+            Integer cantidadProducto = Integer.valueOf(cantidadText.getText());
+            String unidad = unidadText.getText();
+            double precioProducto = Double.parseDouble(precioText.getText());
 
+            Producto nuevoProducto = new Producto(idProducto, nombreProducto, categoria, fechacaducidad, cantidadProducto, unidad, precioProducto);
+            Gerencia.addProducto(nuevoProducto);
+
+            idText.clear();
+            nombreText.clear();
+            categoriaText.clear();
+            caducidadText.clear();
+            cantidadText.clear();
+            unidadText.clear();
+            precioText.clear();
+
+        } catch (DateTimeParseException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Formato de fecha incorrecto");
+            alert.setContentText("Ingrese cuatro digitos para el año, dos para\n el mes y dos para el dia");
+            alert.showAndWait();
+        }
     }
-
 
     @FXML
     void OnMouseclickedGuardarIcono(MouseEvent event) {
+        try {
+            Integer idProducto = Integer.valueOf(idText.getText());
+            String nombreProducto = nombreText.getText();
+            String categoria = categoriaText.getText();
+            LocalDate fechacaducidad = LocalDate.parse(caducidadText.getText());
+            Integer cantidadProducto = Integer.valueOf(cantidadText.getText());
+            String unidad = unidadText.getText();
+            double precioProducto = Double.parseDouble(precioText.getText());
+
+            Producto nuevoProducto = new Producto(idProducto, nombreProducto, categoria, fechacaducidad, cantidadProducto, unidad, precioProducto);
+            Gerencia.addProducto(nuevoProducto);
+
+            idText.clear();
+            nombreText.clear();
+            categoriaText.clear();
+            caducidadText.clear();
+            cantidadText.clear();
+            unidadText.clear();
+            precioText.clear();
+
+        } catch (DateTimeParseException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Formato de fecha incorrecto");
+            alert.setContentText("Ingrese cuatro digitos para el año, dos para el mes y dos para el dia");
+            alert.showAndWait();
+        }
 
     }
 

@@ -43,7 +43,7 @@
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Button fx:id="guardarbutton" alignment="CENTER" layoutX="300.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedGuardarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Guardar" textFill="WHITE">
+      <Button fx:id="guardarbutton" alignment="CENTER" layoutX="300.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedGuardarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>

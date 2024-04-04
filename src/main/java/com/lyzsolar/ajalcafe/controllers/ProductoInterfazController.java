@@ -41,6 +41,8 @@ public class ProductoInterfazController {
 
     Stage vistaMenuAdministrador = new Stage();
     Stage AddProducto = new Stage();
+    Stage DeleteProducto = new Stage();
+
 
 
     @FXML
@@ -55,8 +57,14 @@ public class ProductoInterfazController {
     }
 
     @FXML
-    void OnMouseclickedEliminarButton(MouseEvent event) {
-
+    void OnMouseclickedEliminarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("EliminarProducto-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        DeleteProducto.setTitle("Submenú Eliminar Producto");
+        DeleteProducto.setScene(scene);
+        DeleteProducto.show();
+        Stage stage = (Stage) eliminarButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
