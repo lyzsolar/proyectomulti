@@ -38,7 +38,7 @@ public class pedidoInterfazController {
     @FXML
     private ImageView regresarIcono;
 
-    Stage callMenu = new Stage();
+    Stage vistaMenuAdministrador = new Stage();
 
 
     @FXML
@@ -60,9 +60,9 @@ public class pedidoInterfazController {
     void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        callMenu.setTitle("Menu Administrador");
-        callMenu.setScene(scene);
-        callMenu.show();
+        vistaMenuAdministrador.setTitle("Menu Administrador");
+        vistaMenuAdministrador.setScene(scene);
+        vistaMenuAdministrador.show();
         Stage stage = (Stage) regresarButton.getScene().getWindow();
         stage.close();
     }
@@ -71,9 +71,9 @@ public class pedidoInterfazController {
     void OnMouseclickedRegresarIcono(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        callMenu.setTitle("Menu Administrador");
-        callMenu.setScene(scene);
-        callMenu.show();
+        vistaMenuAdministrador.setTitle("Menu Administrador");
+        vistaMenuAdministrador.setScene(scene);
+        vistaMenuAdministrador.show();
         Stage stage = (Stage) regresarIcono.getScene().getWindow();
         stage.close();
 

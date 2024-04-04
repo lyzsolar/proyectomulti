@@ -29,15 +29,15 @@ public class productoVendedorController {
 
     @FXML
     private Button verProductosButton;
-    Stage callMenu = new Stage();
+    Stage vistaMenuVendedor = new Stage();
 
     @FXML
     void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Vendedor_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        callMenu.setTitle("Menú Vendedor");
-        callMenu.setScene(scene);
-        callMenu.show();
+        vistaMenuVendedor.setTitle("Menú Vendedor");
+        vistaMenuVendedor.setScene(scene);
+        vistaMenuVendedor.show();
         Stage stage = (Stage) regresarIcono.getScene().getWindow();
         stage.close();
 
@@ -47,9 +47,9 @@ public class productoVendedorController {
     void OnMouseclickedRegresarIcono(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Vendedor_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        callMenu.setTitle("Menu Vendedor");
-        callMenu.setScene(scene);
-        callMenu.show();
+        vistaMenuVendedor.setTitle("Menu Vendedor");
+        vistaMenuVendedor.setScene(scene);
+        vistaMenuVendedor.show();
         Stage stage = (Stage) regresarIcono.getScene().getWindow();
         stage.close();
 

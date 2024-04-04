@@ -38,7 +38,7 @@ public class ventasInterfazController {
 
     @FXML
     private Button verButton;
-    Stage callMenu = new Stage();
+    Stage vistaMenuAdministrador = new Stage();
 
     @FXML
     void OnMouseclickedAgregarButton(MouseEvent event) {
@@ -50,9 +50,9 @@ public class ventasInterfazController {
     void OnMouseclickedBackIcono(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        callMenu.setTitle("Menu Administrador");
-        callMenu.setScene(scene);
-        callMenu.show();
+        vistaMenuAdministrador.setTitle("Menu Administrador");
+        vistaMenuAdministrador.setScene(scene);
+        vistaMenuAdministrador.show();
         Stage stage = (Stage) backIcono.getScene().getWindow();
         stage.close();
 
@@ -72,9 +72,9 @@ public class ventasInterfazController {
     void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        callMenu.setTitle("Menu Administrador");
-        callMenu.setScene(scene);
-        callMenu.show();
+        vistaMenuAdministrador.setTitle("Menu Administrador");
+        vistaMenuAdministrador.setScene(scene);
+        vistaMenuAdministrador.show();
         Stage stage = (Stage) regresarButton.getScene().getWindow();
         stage.close();
 

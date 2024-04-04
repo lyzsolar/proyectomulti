@@ -39,17 +39,32 @@ public class ProductoInterfazController {
     @FXML
     private ImageView regresarIcono;
 
-    Stage callMenu = new Stage();
+    Stage vistaMenuAdministrador = new Stage();
+    Stage AddProducto = new Stage();
+    Stage DeleteProducto = new Stage();
+
 
 
     @FXML
-    void OnMouseclickedAgregarButton(MouseEvent event) {
-
+    void OnMouseclickedAgregarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("AgregarProducto-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        AddProducto.setTitle("Submenú Agregar Producto");
+        AddProducto.setScene(scene);
+        AddProducto.show();
+        Stage stage = (Stage) regresarButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
-    void OnMouseclickedEliminarButton(MouseEvent event) {
-
+    void OnMouseclickedEliminarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("EliminarProducto-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        DeleteProducto.setTitle("Submenú Eliminar Producto");
+        DeleteProducto.setScene(scene);
+        DeleteProducto.show();
+        Stage stage = (Stage) eliminarButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
@@ -61,9 +76,9 @@ public class ProductoInterfazController {
     void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        callMenu.setTitle("Menu Administrador");
-        callMenu.setScene(scene);
-        callMenu.show();
+        vistaMenuAdministrador.setTitle("Menu Administrador");
+        vistaMenuAdministrador.setScene(scene);
+        vistaMenuAdministrador.show();
         Stage stage = (Stage) regresarButton.getScene().getWindow();
         stage.close();
         }
@@ -72,9 +87,9 @@ public class ProductoInterfazController {
     void OnMouseclickedRegresarIcono(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        callMenu.setTitle("Menu Administrador");
-        callMenu.setScene(scene);
-        callMenu.show();
+        vistaMenuAdministrador.setTitle("Menu Administrador");
+        vistaMenuAdministrador.setScene(scene);
+        vistaMenuAdministrador.show();
         Stage stage = (Stage) regresarIcono.getScene().getWindow();
         stage.close();
 

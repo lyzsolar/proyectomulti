@@ -42,11 +42,11 @@ public class adminController {
     @FXML
     private ImageView cerrarIcono;
 
-    Stage producto = new Stage();
-    Stage pedido = new Stage();
-    Stage menu = new Stage();
-    Stage venta = new Stage();
-    Stage reporte = new Stage();
+    Stage vistaProducto = new Stage();
+    Stage vistaPedido = new Stage();
+    Stage vistaMenu = new Stage();
+    Stage vistaVenta = new Stage();
+    Stage vistaReporte = new Stage();
 
     @FXML
     void OnMouseclickedCerrarButton(MouseEvent event) {
@@ -65,9 +65,9 @@ public class adminController {
     void OnMouseclickedMenuButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("MenuInterfaz-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        menu.setTitle("Menú");
-        menu.setScene(scene);
-        menu.show();
+        vistaMenu.setTitle("Menú");
+        vistaMenu.setScene(scene);
+        vistaMenu.show();
 
     }
 
@@ -75,9 +75,9 @@ public class adminController {
     void OnMouseclickedPedidoButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PedidoInterfaz-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        pedido.setTitle("Menú pedido");
-        pedido.setScene(scene);
-        pedido.show();
+        vistaPedido.setTitle("Menú pedido");
+        vistaPedido.setScene(scene);
+        vistaPedido.show();
 
     }
 
@@ -85,9 +85,9 @@ public class adminController {
     void OnMouseclickedProductoButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ProductoInterfaz-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        producto.setTitle("Menú producto");
-        producto.setScene(scene);
-        producto.show();
+        vistaProducto.setTitle("Menú producto");
+        vistaProducto.setScene(scene);
+        vistaProducto.show();
 
     }
 
@@ -95,9 +95,9 @@ public class adminController {
     void OnMouseclickedReporteButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ReporteInterfaz-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        reporte.setTitle("Menú Reporte");
-        reporte.setScene(scene);
-        reporte.show();
+        vistaReporte.setTitle("Menú Reporte");
+        vistaReporte.setScene(scene);
+        vistaReporte.show();
 
     }
 
@@ -105,9 +105,9 @@ public class adminController {
     void OnMouseclickedVentasButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VentasInterfaz-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        venta.setTitle("Menú Ventas");
-        venta.setScene(scene);
-        venta.show();
+        vistaVenta.setTitle("Menú Ventas");
+        vistaVenta.setScene(scene);
+        vistaVenta.show();
 
     }
 
