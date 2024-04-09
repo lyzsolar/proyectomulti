@@ -2,16 +2,24 @@ package com.lyzsolar.ajalcafe.controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import com.lyzsolar.ajalcafe.App;
+import com.lyzsolar.ajalcafe.models.Producto;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import com.lyzsolar.ajalcafe.controllers.verProductoController;
 
 public class ProductoInterfazController {
 
@@ -96,17 +104,11 @@ public class ProductoInterfazController {
     }
 
     @FXML
-    void OnMouseclickedVerButton(MouseEvent event) {
-
-    }
-
-    @FXML
-    void initialize() {
-        assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'ProductoInterfaz-view.fxml'.";
-
+    void OnMouseclickedVerButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerProducto-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaMenuAdministrador.setTitle("Almacén de Víveres");
+        vistaMenuAdministrador.setScene(scene);
+        vistaMenuAdministrador.show();
     }
 }

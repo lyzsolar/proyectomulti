@@ -4,21 +4,25 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import com.lyzsolar.ajalcafe.models.Gerencia;
 import com.lyzsolar.ajalcafe.models.Producto;
 
 import com.lyzsolar.ajalcafe.App;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
+import static com.lyzsolar.ajalcafe.models.Gerencia.insumos;
 
 public class AgregarProductoController {
 
@@ -29,13 +33,13 @@ public class AgregarProductoController {
     private URL location;
 
     @FXML
-    private Button guardarbutton;
+    private Button agregarbutton;
 
     @FXML
     private Button regresarButton;
 
     @FXML
-    private ImageView guardarIcono;
+    private ImageView agregarIcono;
 
     @FXML
     private ImageView regresarIcono;
@@ -61,8 +65,13 @@ public class AgregarProductoController {
 
     Stage vistaProducto = new Stage();
 
+
+
+
+    private ObservableList<Producto> insumos = FXCollections.observableArrayList();
+
     @FXML
-    void OnMouseclickedGuardarButton(MouseEvent event) {
+    void OnMouseclickedAgregarButton(MouseEvent event) {
         try {
             Integer idProducto = Integer.valueOf(idText.getText());
             String nombreProducto = nombreText.getText();
@@ -90,10 +99,13 @@ public class AgregarProductoController {
             alert.setContentText("Ingrese cuatro digitos para el año, dos para\n el mes y dos para el dia");
             alert.showAndWait();
         }
+
+
     }
 
     @FXML
-    void OnMouseclickedGuardarIcono(MouseEvent event) {
+    void OnMouseclickedAgregarIcono(MouseEvent event) {
+
         try {
             Integer idProducto = Integer.valueOf(idText.getText());
             String nombreProducto = nombreText.getText();
@@ -135,18 +147,18 @@ public class AgregarProductoController {
         stage.close();
 
     }
-        @FXML
-        void OnMouseclickedRegresarIcono (MouseEvent event) throws IOException {
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ProductoInterfaz-view.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            vistaProducto.setTitle("Menú Producto");
-            vistaProducto.setScene(scene);
-            vistaProducto.show();
-            Stage stage = (Stage) regresarIcono.getScene().getWindow();
-            stage.close();
 
-        }
+    @FXML
+    void OnMouseclickedRegresarIcono(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ProductoInterfaz-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaProducto.setTitle("Menú Producto");
+        vistaProducto.setScene(scene);
+        vistaProducto.show();
+        Stage stage = (Stage) regresarIcono.getScene().getWindow();
+        stage.close();
+
+    }
 }
-
 
 
