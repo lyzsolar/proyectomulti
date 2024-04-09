@@ -7,7 +7,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
-public class VerGastosController {
+public class GastosController {
 
     @FXML
     private TableView<?> TableVerProductos;
