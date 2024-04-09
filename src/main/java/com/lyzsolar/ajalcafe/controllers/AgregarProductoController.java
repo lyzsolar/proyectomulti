@@ -59,6 +59,8 @@ public class AgregarProductoController {
 
     @FXML
     private TextField unidadText;
+    @FXML
+    private TextField totalText;
 
     Stage vistaProducto = new Stage();
 
