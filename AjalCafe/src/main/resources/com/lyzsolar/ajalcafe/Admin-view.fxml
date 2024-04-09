@@ -76,15 +76,15 @@
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
+      <ImageView fx:id="cerrarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="439.0" layoutY="416.0" onMouseClicked="#OnMouseclickedCerrarIcono" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/candado-abierto.png" />
+         </image>
+      </ImageView>
       <Label layoutX="303.0" layoutY="164.0" prefHeight="20.0" prefWidth="210.0" text="Seleccione una opción: " textFill="#6b6969">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Label>
-      <ImageView fx:id="cerrarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="439.0" layoutY="416.0" onMouseClicked="#OnMouseclickedCerrarIcono">
-         <image>
-            <Image url="@images/candado.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

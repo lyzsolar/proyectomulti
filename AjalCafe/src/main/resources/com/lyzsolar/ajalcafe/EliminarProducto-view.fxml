@@ -44,12 +44,12 @@
             <Image url="@images/eliminar.png" />
          </image>
       </ImageView>
-      <Text fill="#6b6969" layoutX="227.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el ID del producto que desea eliminar" textAlignment="CENTER">
+      <Text fill="#6b6969" layoutX="205.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el nombre del producto que desea eliminar" textAlignment="CENTER">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="idText" alignment="CENTER" layoutX="251.0" layoutY="225.0" prefHeight="30.0" prefWidth="309.0" promptText="Id">
+      <TextField fx:id="NombreText" alignment="CENTER" layoutX="251.0" layoutY="225.0" prefHeight="30.0" prefWidth="309.0" promptText="Nombre">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -62,7 +62,7 @@
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="verButton" alignment="CENTER" layoutX="370.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVerButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097b2;" text="Ver" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="BuscarButton" alignment="CENTER" layoutX="370.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedBuscarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097b2;" text="Buscar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>

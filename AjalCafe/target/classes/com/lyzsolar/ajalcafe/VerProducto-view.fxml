@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.verProductoController">
+<AnchorPane prefHeight="523.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.verProductoController">
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="122.0" prefWidth="160.0" style="-fx-background-color: #41B8D5; -fx-border-color: #2B2B2B;" />
       <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="28.0" layoutY="14.0">
@@ -31,7 +32,7 @@
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <TableView fx:id="DataTable" layoutX="-1.0" layoutY="156.0" prefHeight="259.0" prefWidth="642.0">
+      <TableView fx:id="TableVerProductos" layoutX="2.0" layoutY="166.0" prefHeight="259.0" prefWidth="642.0">
         <columns>
           <TableColumn fx:id="IDDataTable" prefWidth="49.33331298828125" text="ID" />
           <TableColumn fx:id="nombreDataTable" prefWidth="131.66668701171875" text="NOMBRE" />
@@ -42,10 +43,11 @@
             <TableColumn fx:id="precioDataTable" prefWidth="81.0" text="PRECIO" />
         </columns>
       </TableView>
-      <TextField alignment="CENTER" layoutX="2.0" layoutY="121.0" prefHeight="10.0" prefWidth="156.0" style="-fx-background-color: #41b8d5; -fx-border-color: #74371d;" text="Producto">
+      <TextField alignment="CENTER" layoutY="130.0" prefHeight="10.0" prefWidth="156.0" style="-fx-background-color: #41b8d5; -fx-border-color: #74371d;" text="Producto">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
+      <Button fx:id="RegresarButton" layoutX="90.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedRegresarButton" prefHeight="44.0" prefWidth="118.0" text="Regresar" />
    </children>
 </AnchorPane>

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.verProductoController">
+<AnchorPane prefHeight="523.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.verProductoController">
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="122.0" prefWidth="160.0" style="-fx-background-color: #41B8D5; -fx-border-color: #2B2B2B;" />
       <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="28.0" layoutY="14.0">
@@ -27,51 +27,27 @@
             </Text>
          </children>
       </AnchorPane>
-      <Text fill="#6b6969" layoutX="182.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos existentes en el inventario">
+      <Text fill="#6b6969" layoutX="182.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos existentes en el inventario">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <TableView fx:id="tablaProducto" layoutX="-1.0" layoutY="186.0" prefHeight="168.0" prefWidth="642.0">
+      <TableView fx:id="TableVerProductos" layoutX="2.0" layoutY="166.0" prefHeight="259.0" prefWidth="642.0">
         <columns>
-          <TableColumn fx:id="IDtablaProductos" prefWidth="49.33331298828125" text="ID" />
-          <TableColumn fx:id="nametablaProductos" prefWidth="131.66668701171875" text="NOMBRE" />
-            <TableColumn fx:id="categoriatablaProductos" prefWidth="104.0" text="CATEGORIA" />
-            <TableColumn fx:id="caducidadtablaProductos" prefWidth="108.66668701171875" text="CADUCIDAD" />
-            <TableColumn fx:id="cantidadtablaProductos" prefWidth="81.0" text="CANTIDAD" />
-            <TableColumn fx:id="unidadtablaProductos" minWidth="3.6666259765625" prefWidth="83.0" text="UNIDAD" />
-            <TableColumn fx:id="preciotablaProductos" prefWidth="81.0" text="PRECIO" />
+          <TableColumn fx:id="IDDataTable" prefWidth="49.33331298828125" text="ID" />
+          <TableColumn fx:id="nombreDataTable" prefWidth="131.66668701171875" text="NOMBRE" />
+            <TableColumn fx:id="categoriaDataTable" prefWidth="104.0" text="CATEGORIA" />
+            <TableColumn fx:id="caducidadDataTable" prefWidth="108.66668701171875" text="CADUCIDAD" />
+            <TableColumn fx:id="cantidadDataTable" prefWidth="81.0" text="CANTIDAD" />
+            <TableColumn fx:id="unidadDataTable" minWidth="3.6666259765625" prefWidth="83.0" text="UNIDAD" />
+            <TableColumn fx:id="precioDataTable" prefWidth="81.0" text="PRECIO" />
         </columns>
       </TableView>
-      <TextField alignment="CENTER" layoutX="1.0" layoutY="121.0" prefHeight="33.0" prefWidth="160.0" style="-fx-background-color: #41b8d5; -fx-border-color: #74371d;" text="Producto">
+      <TextField alignment="CENTER" layoutY="130.0" prefHeight="10.0" prefWidth="156.0" style="-fx-background-color: #41b8d5; -fx-border-color: #74371d;" text="Producto">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <Button fx:id="cerrar" layoutX="420.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedCerrarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097b2;" text="Cerrar" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Century Gothic" size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="regresar" layoutX="94.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedRegresarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097b2;" text="Regresar" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Century Gothic" size="14.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="202.0" layoutY="423.0">
-         <image>
-            <Image url="@images/regreso.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="528.0" layoutY="423.0">
-         <image>
-            <Image url="@images/candado.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="verbutton" layoutX="284.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedVerButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097b2;" text="Ver" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Century Gothic" size="14.0" />
-         </font>
-      </Button>
+      <Button fx:id="RegresarButton" layoutX="90.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedRegresarButton" prefHeight="44.0" prefWidth="118.0" text="Regresar" />
    </children>
 </AnchorPane>

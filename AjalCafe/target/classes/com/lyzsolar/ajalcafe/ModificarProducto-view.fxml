@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.ModificarProductoController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.ModificarProductoController">
    <children>
       <AnchorPane prefHeight="480.0" prefWidth="156.0" style="-fx-background-color: #41B8D5; -fx-border-color: #2B2B2B;">
          <children>
@@ -44,22 +44,22 @@
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Button fx:id="guardarbutton" alignment="CENTER" layoutX="300.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedGuardarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="guardarbutton" alignment="CENTER" layoutX="227.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedGuardarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="regresarButton" alignment="CENTER" layoutX="425.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedRegresarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Regresar" textFill="WHITE">
+      <Button fx:id="regresarButton" alignment="CENTER" layoutX="465.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedRegresarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Regresar" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <ImageView fx:id="guardarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="259.0" layoutY="423.0" onMouseClicked="#OnMouseclickedGuardarIcono">
+      <ImageView fx:id="guardarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="186.0" layoutY="424.0" onMouseClicked="#OnMouseclickedGuardarIcono">
          <image>
             <Image url="@images/save_5620060.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="regresarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="535.0" layoutY="425.0" onMouseClicked="#OnMouseclickedRegresarIcono">
+      <ImageView fx:id="regresarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="575.0" layoutY="424.0" onMouseClicked="#OnMouseclickedRegresarIcono">
          <image>
             <Image url="@images/regreso.png" />
          </image>
@@ -120,5 +120,10 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
+      <Button fx:id="BuscarButton" layoutX="347.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedBuscarButton" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #0097B2;" text="Buscar" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

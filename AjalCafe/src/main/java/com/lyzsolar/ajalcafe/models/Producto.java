@@ -2,7 +2,6 @@ package com.lyzsolar.ajalcafe.models;
 
 import javafx.beans.property.*;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
