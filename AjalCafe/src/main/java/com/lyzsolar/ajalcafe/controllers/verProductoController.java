@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -46,6 +47,13 @@ public class verProductoController {
 
     @FXML
     private Button RegresarButton;
+    @FXML
+    private ImageView regresarIcono;
+
+    @FXML
+    void OnMouseClickedRegresarIcono(MouseEvent event) {
+
+    }
 
     @FXML
     void OnMouseClickedRegresarButton(MouseEvent event) {
