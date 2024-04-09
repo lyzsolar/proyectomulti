@@ -1,79 +1,99 @@
 package com.lyzsolar.ajalcafe.models;
 
+import javafx.beans.property.*;
+
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Producto {
-    private Integer idProducto;
-    private String nombreProducto;
-    private String categoria;
-    private LocalDate fechacaducidad;
-    private Integer cantidadProducto;
-    private String unidad;
-    private double precioProducto;
+    private final IntegerProperty idProducto;
+    private final StringProperty nombreProducto;
+    private final StringProperty categoria;
+    private final StringProperty fechacaducidad;
+    private final IntegerProperty cantidadProducto;
+    private final StringProperty unidad;
+    private final DoubleProperty precioProducto;
 
-    public Producto(Integer idProducto, String nombreProducto, String categoria, LocalDate fechacaducidad, Integer cantidadProducto, String unidad, double precioProducto) {
-        this.idProducto = idProducto;
-        this.nombreProducto = nombreProducto;
-        this.categoria = categoria;
-        this.fechacaducidad = fechacaducidad;
-        this.cantidadProducto = cantidadProducto;
-        this.unidad = unidad;
-        this.precioProducto = precioProducto;
+    private static List<Producto> listaProductos = new ArrayList<>();
+
+    public Producto(int idProducto, String nombreProducto, String categoria, String fechacaducidad, int cantidadProducto, String unidad, double precioProducto) {
+        this.idProducto = new SimpleIntegerProperty(idProducto);
+        this.nombreProducto = new SimpleStringProperty(nombreProducto);
+        this.categoria = new SimpleStringProperty(categoria);
+        this.fechacaducidad = new SimpleStringProperty(fechacaducidad);
+        this.cantidadProducto = new SimpleIntegerProperty(cantidadProducto);
+        this.unidad = new SimpleStringProperty(unidad);
+        this.precioProducto = new SimpleDoubleProperty(precioProducto);
     }
 
+
     public Integer getIdProducto() {
+        return idProducto.get();
+    }
+
+    public IntegerProperty idProductoProperty() {
         return idProducto;
     }
 
-    public void setIdProducto(Integer idProducto) {
-        this.idProducto = idProducto;
+    public void setIdProducto(int idProducto) {
+        this.idProducto.set(idProducto);
     }
 
-    public String getNombreProducto() {
+    public StringProperty nombreProductoProperty() {
         return nombreProducto;
     }
 
-    public void setNombreProducto(String nombreProducto) {
-        this.nombreProducto = nombreProducto;
-    }
-
-    public String getCategoria() {
+    public StringProperty categoriaProperty() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public LocalDate getFechacaducidad() {
-        return fechacaducidad;
-    }
-
-    public void setFechacaducidad(LocalDate fechacaducidad) {
-        this.fechacaducidad = fechacaducidad;
-    }
-
-    public Integer getCantidadProducto() {
+    public IntegerProperty cantidadProductoProperty() {
         return cantidadProducto;
     }
 
-    public void setCantidadProducto(Integer cantidadProducto) {
-        this.cantidadProducto = cantidadProducto;
+    public void setCantidadProducto(int cantidadProducto) {
+        this.cantidadProducto.set(cantidadProducto);
     }
 
-    public String getUnidad() {
+    public StringProperty unidadProperty() {
         return unidad;
     }
 
-    public void setUnidad(String unidad) {
-        this.unidad = unidad;
-    }
-
-    public double getPrecioProducto() {
+    public DoubleProperty precioProductoProperty() {
         return precioProducto;
     }
 
-    public void setPrecioProducto(double precioProducto) {
-        this.precioProducto = precioProducto;
+    public StringProperty fechacaducidad() {
+        return fechacaducidad;
+    }
+
+    public StringProperty fechacaducidadProperty() {
+        return fechacaducidad;
+    }
+
+    public void setFechacaducidad(String fechacaducidad) {
+        this.fechacaducidad.set(fechacaducidad);
+    }
+
+    public static void agregarProductoLista(Producto producto) {
+        listaProductos.add(producto);
+    }
+
+    public static List<Producto> obtenerListaProductos() {
+        return listaProductos;
+    }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "idProducto=" + idProducto +
+                ", nombreProducto='" + nombreProducto + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", fechacaducidad=" + fechacaducidad +
+                ", cantidadProducto=" + cantidadProducto +
+                ", unidad='" + unidad + '\'' +
+                ", precioProducto=" + precioProducto +
+                '}';
     }
 }

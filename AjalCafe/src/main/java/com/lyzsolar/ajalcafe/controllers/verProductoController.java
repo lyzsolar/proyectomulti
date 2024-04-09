@@ -1,58 +1,89 @@
 package com.lyzsolar.ajalcafe.controllers;
 
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.ResourceBundle;
-
+import com.lyzsolar.ajalcafe.App;
+import com.lyzsolar.ajalcafe.models.Empleado;
+import com.lyzsolar.ajalcafe.models.Gerencia;
 import com.lyzsolar.ajalcafe.models.Producto;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+
+import java.time.LocalDate;
 
 public class verProductoController {
 
     @FXML
-    private ResourceBundle resources;
+    private TableView<String> tablaProducto;
 
     @FXML
-    private URL location;
+    private TableColumn<Gerencia, Integer> IDtablaProductos;
 
     @FXML
-    private TableView<Producto> DataTable;
+    private TableColumn<Gerencia, String> nametablaProductos;
 
     @FXML
-    private TableColumn<Producto, Integer> IDDataTable;
+    private TableColumn<Gerencia, String> categoriatablaProductos;
 
     @FXML
-    private TableColumn<Producto, LocalDate> caducidadDataTable;
+    private TableColumn<Gerencia, LocalDate> caducidadtablaProductos;
 
     @FXML
-    private TableColumn<Producto, Integer> cantidadDataTable;
+    private TableColumn<Gerencia, Integer> cantidadtablaProductos;
 
     @FXML
-    private TableColumn<Producto, String> categoriaDataTable;
+    private TableColumn<Gerencia, String> unidadtablaProductos;
 
     @FXML
-    private TableColumn<Producto, String> nombreDataTable;
+    private TableColumn<Gerencia, Double> preciotablaProductos;
 
     @FXML
-    private TableColumn<Producto, Double> precioDataTable;
+    private Button cerrar;
 
     @FXML
-    private TableColumn<Producto, String> unidadDataTable;
+    private Button regresar;
 
     @FXML
-    void initialize() {
-        assert DataTable != null : "fx:id=\"DataTable\" was not injected: check your FXML file 'VerProducto-view.fxml'.";
-        assert IDDataTable != null : "fx:id=\"IDDataTable\" was not injected: check your FXML file 'VerProducto-view.fxml'.";
-        assert caducidadDataTable != null : "fx:id=\"caducidadDataTable\" was not injected: check your FXML file 'VerProducto-view.fxml'.";
-        assert cantidadDataTable != null : "fx:id=\"cantidadDataTable\" was not injected: check your FXML file 'VerProducto-view.fxml'.";
-        assert categoriaDataTable != null : "fx:id=\"categoriaDataTable\" was not injected: check your FXML file 'VerProducto-view.fxml'.";
-        assert nombreDataTable != null : "fx:id=\"nombreDataTable\" was not injected: check your FXML file 'VerProducto-view.fxml'.";
-        assert precioDataTable != null : "fx:id=\"precioDataTable\" was not injected: check your FXML file 'VerProducto-view.fxml'.";
-        assert unidadDataTable != null : "fx:id=\"unidadDataTable\" was not injected: check your FXML file 'VerProducto-view.fxml'.";
+    private Button verbutton;
+    private ObservableList<Gerencia> insumos = FXCollections.observableArrayList();
+
+    @FXML
+    void OnMouseclickedCerrarButton(MouseEvent event) {
 
     }
 
+    @FXML
+    void OnMouseclickedRegresarButton(MouseEvent event) {
+
+    }
+
+    @FXML
+    void OnMouseclickedVerButton(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    void initialize() {
+
+        // Configuración de las columnas de la tabla usando PropertyValueFactory
+        IDtablaProductos.setCellValueFactory(new PropertyValueFactory<>("idProducto"));
+        nametablaProductos.setCellValueFactory(new PropertyValueFactory<>("nombreProducto"));
+        categoriatablaProductos.setCellValueFactory(new PropertyValueFactory<>("categoria"));
+        caducidadtablaProductos.setCellValueFactory(new PropertyValueFactory<>("fechacaducidad"));
+        cantidadtablaProductos.setCellValueFactory(new PropertyValueFactory<>("cantidadProducto"));
+        unidadtablaProductos.setCellValueFactory(new PropertyValueFactory<>("unidad"));
+        preciotablaProductos.setCellValueFactory(new PropertyValueFactory<>("precioProducto"));
+        tablaProducto.setItems(tablaProducto.getItems());
+    }
+
+    private void cargarListaProductos() {
+    }
 }
 
