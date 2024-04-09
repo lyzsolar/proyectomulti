@@ -2,24 +2,16 @@ package com.lyzsolar.ajalcafe.controllers;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import com.lyzsolar.ajalcafe.App;
-import com.lyzsolar.ajalcafe.models.Producto;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import com.lyzsolar.ajalcafe.controllers.verProductoController;
 
 public class ProductoInterfazController {
 
@@ -51,8 +43,6 @@ public class ProductoInterfazController {
     Stage AddProducto = new Stage();
     Stage DeleteProducto = new Stage();
 
-
-
     @FXML
     void OnMouseclickedAgregarButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("AgregarProducto-view.fxml"));
@@ -76,8 +66,14 @@ public class ProductoInterfazController {
     }
 
     @FXML
-    void OnMouseclickedModificarButton(MouseEvent event) {
-
+    void OnMouseclickedModificarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ModificarProducto-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        DeleteProducto.setTitle("Submenú Eliminar Producto");
+        DeleteProducto.setScene(scene);
+        DeleteProducto.show();
+        Stage stage = (Stage) eliminarButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
@@ -104,11 +100,17 @@ public class ProductoInterfazController {
     }
 
     @FXML
-    void OnMouseclickedVerButton(MouseEvent event) throws IOException {
+    void OnMouseclickedVerButton(MouseEvent event) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerProducto-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        vistaMenuAdministrador.setTitle("Almacén de Víveres");
+        vistaMenuAdministrador.setTitle("Menu Administrador");
         vistaMenuAdministrador.setScene(scene);
         vistaMenuAdministrador.show();
+        Stage stage = (Stage) regresarIcono.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    void initialize() {
     }
 }

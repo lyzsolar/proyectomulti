@@ -28,7 +28,7 @@ public class homeController {
     @FXML
     private Button IngresarButton;
     @FXML
-    private ImageView IngresarIcono;
+    private ImageView ingresarIcono;
 
 
     @FXML
@@ -47,20 +47,20 @@ public class homeController {
         String nombreUsuario = user.getText();
         String contrasena = password.getText();
 
-        try {
-            if (nombreUsuario.equals(administrador.getUsuario()) && contrasena.equals(administrador.getContrasena())) {
+        try{
+            if (nombreUsuario.equals(administrador.getUsuario()) && contrasena.equals(administrador.getContrasena())){
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Admin-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 vistaMenuAdministrador.setTitle("Menu Administrador");
                 vistaMenuAdministrador.setScene(scene);
                 vistaMenuAdministrador.show();
-            } else if (nombreUsuario.equals(vendedor.getUsuario2()) && contrasena.equals(vendedor.getContrasena2())) {
+            } else if (nombreUsuario.equals(vendedor.getUsuario2()) && contrasena.equals(vendedor.getContrasena2())){
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Vendedor_view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 vistaMenuVendedor.setTitle("Menu Vendedor");
                 vistaMenuVendedor.setScene(scene);
                 vistaMenuVendedor.show();
-            } else {
+            }else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
                 alert.setHeaderText("Acceso incorrecto");
@@ -70,6 +70,7 @@ public class homeController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 
     @FXML

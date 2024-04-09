@@ -2,11 +2,15 @@ package com.lyzsolar.ajalcafe.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.lyzsolar.ajalcafe.models.Producto;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class EliminarProductoController {
 
@@ -20,13 +24,13 @@ public class EliminarProductoController {
     private ImageView eliminarIcono;
 
     @FXML
-    private TextField idText;
+    private TextField NombreText;
 
     @FXML
     private Button eliminarButton;
 
     @FXML
-    private Button verButton;
+    private Button BuscarButton;
 
     @FXML
     private Button regresarButton;
@@ -38,8 +42,53 @@ public class EliminarProductoController {
     private ImageView regresarIcono;
 
     @FXML
-    void OnMouseclickedEliminarButton(MouseEvent event) {
+    void OnMouseclickedBuscarButton(MouseEvent event) {
+        String nombreProductoABuscar = NombreText.getText().trim();
+        boolean productoEncontrado = false;
+        for (Producto producto : Producto.obtenerListaProductos()) {
+            if (producto.nombreProductoProperty().get().equalsIgnoreCase(nombreProductoABuscar)) {
+                productoEncontrado = true;
+                break;
+            }
+        }
+        if (productoEncontrado) {
+            mostrarAlerta("Producto encontrado", "El producto ha sido encontrado.");
+        } else {
+            mostrarAlertaError("Producto no encontrado", "El producto no existe en la lista.");
+        }
+    }
 
+    private void mostrarAlerta(String titulo, String contenido) {
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(null);
+        alerta.setContentText(contenido);
+        alerta.showAndWait();
+    }
+    private void mostrarAlertaError(String titulo, String contenido) {
+        Alert alerta = new Alert(Alert.AlertType.ERROR);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(null);
+        alerta.setContentText(contenido);
+        alerta.showAndWait();
+    }
+
+    @FXML
+    void OnMouseclickedEliminarButton(MouseEvent event) {
+        String nombreProductoAEliminar = NombreText.getText().trim();
+        boolean productoEliminado = false;
+        for (Producto producto : Producto.obtenerListaProductos()) {
+            if (producto.nombreProductoProperty().get().equalsIgnoreCase(nombreProductoAEliminar)) {
+                Producto.obtenerListaProductos().remove(producto);
+                productoEliminado = true;
+                break;
+            }
+        }
+        if (productoEliminado) {
+            mostrarAlerta("Producto eliminado", "El producto ha sido eliminado de la lista.");
+        } else {
+            mostrarAlertaError("Producto no encontrado", "El producto no existe en la lista.");
+        }
     }
 
     @FXML
@@ -49,16 +98,12 @@ public class EliminarProductoController {
 
     @FXML
     void OnMouseclickedRegresarButton(MouseEvent event) {
-
+        Stage stage = (Stage) regresarButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void OnMouseclickedRegresarIcono(MouseEvent event) {
-
-    }
-
-    @FXML
-    void OnMouseclickedVerButton(MouseEvent event) {
 
     }
 
@@ -69,13 +114,5 @@ public class EliminarProductoController {
 
     @FXML
     void initialize() {
-        assert eliminarIcono != null : "fx:id=\"eliminarIcono\" was not injected: check your FXML file 'EliminarProducto-view.fxml'.";
-        assert idText != null : "fx:id=\"idText\" was not injected: check your FXML file 'EliminarProducto-view.fxml'.";
-        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'EliminarProducto-view.fxml'.";
-        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'EliminarProducto-view.fxml'.";
-        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'EliminarProducto-view.fxml'.";
-        assert verIcono != null : "fx:id=\"verIcono\" was not injected: check your FXML file 'EliminarProducto-view.fxml'.";
-        assert regresarIcono != null : "fx:id=\"regresarIcono\" was not injected: check your FXML file 'EliminarProducto-view.fxml'.";
-
     }
 }
