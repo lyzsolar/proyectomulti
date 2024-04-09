@@ -104,7 +104,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="AgregarProductText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="209.0" prefHeight="67.0" prefWidth="310.0" promptText="Agregar Productos" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="AgregarProductText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="201.0" prefHeight="82.0" prefWidth="310.0" promptText="Agregar Productos" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
