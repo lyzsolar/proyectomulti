@@ -40,6 +40,7 @@ public class menuInterfazController {
     Stage vistaMenuAdministrador = new Stage();
     Stage AddMenu = new Stage();
     Stage DeleteMenu = new Stage();
+    Stage VerMenu = new Stage();
 
     @FXML
     void OnMouseclickedAgregarButton(MouseEvent event) throws IOException{
@@ -104,9 +105,9 @@ public class menuInterfazController {
     void OnMouseclickedVerButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerMenu-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        DeleteMenu.setTitle("Ver Menú");
-        DeleteMenu.setScene(scene);
-        DeleteMenu.show();
+        VerMenu.setTitle("Ver Menú");
+        VerMenu.setScene(scene);
+        VerMenu.show();
         Stage stage = (Stage) verButton.getScene().getWindow();
         stage.close();
 
