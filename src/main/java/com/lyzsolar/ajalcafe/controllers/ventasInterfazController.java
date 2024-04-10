@@ -39,9 +39,18 @@ public class ventasInterfazController {
     @FXML
     private Button verButton;
     Stage vistaMenuAdministrador = new Stage();
+    Stage vistaAddVenta = new Stage();
+    Stage vistaDeleteVenta = new Stage();
+    Stage vistaModifyVenta = new Stage();
+    Stage vistaObservarVenta = new Stage();
 
     @FXML
-    void OnMouseclickedAgregarButton(MouseEvent event) {
+    void OnMouseclickedAgregarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("AgregarVenta.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaAddVenta.setTitle("Submenú Agregar ventas");
+        vistaAddVenta.setScene(scene);
+        vistaAddVenta.show();
 
     }
 
@@ -59,12 +68,23 @@ public class ventasInterfazController {
     }
 
     @FXML
-    void OnMouseclickedEliminarButton(MouseEvent event) {
+    void OnMouseclickedEliminarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("EliminarVenta-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaDeleteVenta.setTitle("Submenú Eliminar Ventas");
+        vistaDeleteVenta.setScene(scene);
+        vistaDeleteVenta.show();
+
 
     }
 
     @FXML
-    void OnMouseclickedModificarButton(MouseEvent event) {
+    void OnMouseclickedModificarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ModificarVenta-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaModifyVenta.setTitle("Submenú Modificar Ventas");
+        vistaModifyVenta.setScene(scene);
+        vistaModifyVenta.show();
 
     }
 
@@ -81,7 +101,12 @@ public class ventasInterfazController {
     }
 
     @FXML
-    void OnMouseclickedVerButton(MouseEvent event) {
+    void OnMouseclickedVerButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerVenta-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaObservarVenta.setTitle("Submenú Ver Ventas");
+        vistaObservarVenta.setScene(scene);
+        vistaObservarVenta.show();
 
     }
 

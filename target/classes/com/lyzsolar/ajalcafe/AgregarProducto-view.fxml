@@ -38,32 +38,32 @@
             <Image url="@images/anadiralcarrito.png" />
          </image>
       </ImageView>
-      <Text fill="#6b6969" layoutX="288.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese los datos del producto:" textAlignment="CENTER">
+      <Text fill="#6b6969" layoutX="293.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese los datos del producto:" textAlignment="CENTER">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Button fx:id="guardarbutton" alignment="CENTER" layoutX="300.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedGuardarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="guardarbutton" alignment="CENTER" layoutX="265.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedGuardarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="regresarButton" alignment="CENTER" layoutX="425.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedRegresarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Regresar" textFill="WHITE">
+      <Button fx:id="regresarButton" alignment="CENTER" layoutX="464.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#OnMouseclickedRegresarButton" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #0097B2;" text="Regresar" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <ImageView fx:id="guardarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="259.0" layoutY="423.0" onMouseClicked="#OnMouseclickedGuardarIcono">
+      <ImageView fx:id="guardarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="302.0" layoutY="409.0" onMouseClicked="#OnMouseclickedGuardarIcono">
          <image>
             <Image url="@images/save_5620060.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="regresarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="535.0" layoutY="425.0" onMouseClicked="#OnMouseclickedRegresarIcono">
+      <ImageView fx:id="regresarIcono" fitHeight="31.0" fitWidth="31.0" layoutX="502.0" layoutY="409.0" onMouseClicked="#OnMouseclickedRegresarIcono">
          <image>
             <Image url="@images/regreso.png" />
          </image>
       </ImageView>
-      <TextField fx:id="idText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="164.0" prefHeight="30.0" prefWidth="309.0" promptText="Id" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="idText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="145.0" prefHeight="30.0" prefWidth="309.0" promptText="Id" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -71,7 +71,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="nombreText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="201.0" prefHeight="30.0" prefWidth="309.0" promptText="Nombre" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="nombreText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="182.0" prefHeight="30.0" prefWidth="309.0" promptText="Nombre" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -79,7 +79,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="categoriaText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="238.0" prefHeight="30.0" prefWidth="309.0" promptText="Categoria" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="categoriaText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="218.0" prefHeight="30.0" prefWidth="309.0" promptText="Categoria" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -87,7 +87,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="caducidadText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="275.0" prefHeight="30.0" prefWidth="309.0" promptText="Caducidad (yyyy-mm-dd)" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="caducidadText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="255.0" prefHeight="30.0" prefWidth="309.0" promptText="Caducidad (yyyy-mm-dd)" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -95,7 +95,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="cantidadText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" promptText="Cantidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="cantidadText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="292.0" prefHeight="30.0" prefWidth="150.0" promptText="Cantidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -103,7 +103,7 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="precioText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="349.0" prefHeight="30.0" prefWidth="309.0" promptText="Precio" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="precioText" alignment="CENTER" cache="true" layoutX="257.0" layoutY="329.0" prefHeight="30.0" prefWidth="150.0" promptText="Precio Unitario" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -111,7 +111,23 @@
             <DropShadow color="#1aa4c7" />
          </effect>
       </TextField>
-      <TextField fx:id="unidadText" alignment="CENTER" cache="true" layoutX="415.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" promptText="Unidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="unidadText" alignment="CENTER" cache="true" layoutX="415.0" layoutY="292.0" prefHeight="30.0" prefWidth="150.0" promptText="Unidad" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#1aa4c7" />
+         </effect>
+      </TextField>
+      <TextField fx:id="totalText" alignment="CENTER" cache="true" layoutX="416.0" layoutY="330.0" prefHeight="30.0" prefWidth="150.0" promptText="Total" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#1aa4c7" />
+         </effect>
+      </TextField>
+      <TextField fx:id="caducidadText1" alignment="CENTER" cache="true" layoutX="258.0" layoutY="364.0" prefHeight="30.0" prefWidth="309.0" promptText="Fecha de Compra (yyyy-mm-dd)" style="-fx-border-color: #B8B9BB; -fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>

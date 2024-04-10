@@ -1,11 +1,15 @@
 package com.lyzsolar.ajalcafe.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.lyzsolar.ajalcafe.App;
 import com.lyzsolar.ajalcafe.models.Producto;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -49,16 +53,30 @@ public class verProductoController {
     private Button RegresarButton;
     @FXML
     private ImageView regresarIcono;
+    Stage vistaProducto = new Stage();
 
     @FXML
-    void OnMouseClickedRegresarIcono(MouseEvent event) {
+    void OnMouseClickedRegresarIcono(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ProductoInterfaz-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaProducto.setTitle("Menú Producto");
+        vistaProducto.setScene(scene);
+        vistaProducto.show();
+        Stage stage = (Stage) regresarIcono.getScene().getWindow();
+        stage.close();
 
     }
 
     @FXML
-    void OnMouseClickedRegresarButton(MouseEvent event) {
+    void OnMouseClickedRegresarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ProductoInterfaz-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaProducto.setTitle("Menú Producto");
+        vistaProducto.setScene(scene);
+        vistaProducto.show();
         Stage stage = (Stage) RegresarButton.getScene().getWindow();
         stage.close();
+
     }
 
     @FXML

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="523.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.GastosController">
+<AnchorPane prefHeight="523.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyzsolar.ajalcafe.controllers.VerGastosController">
     <children>
         <AnchorPane layoutY="-2.0" prefHeight="122.0" prefWidth="160.0" style="-fx-background-color: #41B8D5; -fx-border-color: #2B2B2B;" />
         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="28.0" layoutY="14.0">
@@ -18,9 +18,9 @@
                 <Image url="@images/logo.png" />
             </image>
         </ImageView>
-        <AnchorPane layoutX="158.0" layoutY="-1.0" prefHeight="122.0" prefWidth="489.0" style="-fx-border-color: #8F8E8E;">
+        <AnchorPane layoutX="160.0" layoutY="-1.0" prefHeight="122.0" prefWidth="482.0" style="-fx-border-color: #8F8E8E;">
             <children>
-                <Text fill="#0097b2" layoutX="103.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Ver Gastos!">
+                <Text fill="#0097b2" layoutX="161.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Gastos!">
                     <font>
                         <Font name="Century Gothic" size="36.0" />
                     </font>

@@ -1,10 +1,14 @@
 package com.lyzsolar.ajalcafe.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.lyzsolar.ajalcafe.App;
 import com.lyzsolar.ajalcafe.models.Producto;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -40,6 +44,7 @@ public class EliminarProductoController {
 
     @FXML
     private ImageView regresarIcono;
+    Stage vistaProducto = new Stage();
 
     @FXML
     void OnMouseclickedBuscarButton(MouseEvent event) {
@@ -97,7 +102,12 @@ public class EliminarProductoController {
     }
 
     @FXML
-    void OnMouseclickedRegresarButton(MouseEvent event) {
+    void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ProductoInterfaz-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        vistaProducto.setTitle("Menú Producto");
+        vistaProducto.setScene(scene);
+        vistaProducto.show();
         Stage stage = (Stage) regresarButton.getScene().getWindow();
         stage.close();
     }
