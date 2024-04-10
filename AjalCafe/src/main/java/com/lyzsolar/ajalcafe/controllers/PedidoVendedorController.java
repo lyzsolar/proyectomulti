@@ -40,19 +40,43 @@ public class PedidoVendedorController {
     private Button verButton;
 
     Stage vistaMenuVendedor = new Stage();
+    Stage AddPedido = new Stage();
+    Stage DeletePedido = new Stage();
+    Stage VerPedidos = new Stage();
 
     @FXML
-    void OnMouseclickedAgregarButton(MouseEvent event) {
+    void OnMouseclickedAgregarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("AgregarPedido-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        AddPedido.setTitle("Agregar Pedido");
+        AddPedido.setScene(scene);
+        AddPedido.show();
+        Stage stage = (Stage) agregarButton.getScene().getWindow();
+        stage.close();
 
     }
 
     @FXML
-    void OnMouseclickedEliminarButton(MouseEvent event) {
+    void OnMouseclickedEliminarButton(MouseEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("EliminarPedido-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        DeletePedido.setTitle("Agregar Pedido");
+        DeletePedido.setScene(scene);
+        DeletePedido.show();
+        Stage stage = (Stage) eliminarButton.getScene().getWindow();
+        stage.close();
 
     }
 
     @FXML
-    void OnMouseclickedModificarButton(MouseEvent event) {
+    void OnMouseclickedModificarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ModificarPedido-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        DeletePedido.setTitle("Agregar Pedido");
+        DeletePedido.setScene(scene);
+        DeletePedido.show();
+        Stage stage = (Stage) regresarButton.getScene().getWindow();
+        stage.close();
 
     }
 
@@ -81,7 +105,14 @@ public class PedidoVendedorController {
     }
 
     @FXML
-    void OnMouseclickedVerButton(MouseEvent event) {
+    void OnMouseclickedVerButton(MouseEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerPedido-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        VerPedidos.setTitle("Ver Productos");
+        VerPedidos.setScene(scene);
+        VerPedidos.show();
+        Stage stage = (Stage) verButton.getScene().getWindow();
+        stage.close();
 
     }
 

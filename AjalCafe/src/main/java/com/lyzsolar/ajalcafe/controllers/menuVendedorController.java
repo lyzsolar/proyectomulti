@@ -61,7 +61,7 @@ public class menuVendedorController {
 
     @FXML
     void OnMouseclickedVerMenuButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerMenu_view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerMenu-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         VerMenu.setTitle("Menu Vendedor");
         VerMenu.setScene(scene);
