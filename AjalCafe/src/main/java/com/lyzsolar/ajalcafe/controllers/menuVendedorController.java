@@ -33,6 +33,7 @@ public class menuVendedorController {
     private Button verMenuButton;
 
     Stage vistaMenuVendedor = new Stage();
+    Stage VerMenu = new Stage();
 
     @FXML
     void OnMouseclickedRegresarButton(MouseEvent event) throws IOException {
@@ -59,7 +60,14 @@ public class menuVendedorController {
     }
 
     @FXML
-    void OnMouseclickedVerMenuButton(MouseEvent event) {
+    void OnMouseclickedVerMenuButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerMenu_view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        VerMenu.setTitle("Menu Vendedor");
+        VerMenu.setScene(scene);
+        VerMenu.show();
+        Stage stage = (Stage) verMenuButton.getScene().getWindow();
+        stage.close();
 
     }
 
