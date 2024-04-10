@@ -38,19 +38,42 @@ public class menuInterfazController {
     @FXML
     private ImageView regresarIcono;
     Stage vistaMenuAdministrador = new Stage();
+    Stage AddMenu = new Stage();
+    Stage DeleteMenu = new Stage();
 
     @FXML
-    void OnMouseclickedAgregarButton(MouseEvent event) {
+    void OnMouseclickedAgregarButton(MouseEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("AgregarMenu-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        AddMenu.setTitle("Agregar Menú");
+        AddMenu.setScene(scene);
+        AddMenu.show();
+        Stage stage = (Stage) agregarButton.getScene().getWindow();
+        stage.close();
 
     }
 
     @FXML
-    void OnMouseclickedEliminarButton(MouseEvent event) {
+    void OnMouseclickedEliminarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("EliminarMenu-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        DeleteMenu.setTitle("Eliminar Menú");
+        DeleteMenu.setScene(scene);
+        DeleteMenu.show();
+        Stage stage = (Stage) eliminarButton.getScene().getWindow();
+        stage.close();
 
     }
 
     @FXML
-    void OnMouseclickedModificarButton(MouseEvent event) {
+    void OnMouseclickedModificarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ModificarMenu-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        DeleteMenu.setTitle("Modificar Menú");
+        DeleteMenu.setScene(scene);
+        DeleteMenu.show();
+        Stage stage = (Stage) modificarButton.getScene().getWindow();
+        stage.close();
 
     }
 
@@ -78,18 +101,19 @@ public class menuInterfazController {
     }
 
     @FXML
-    void OnMouseclickedVerButton(MouseEvent event) {
+    void OnMouseclickedVerButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VerMenu-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        DeleteMenu.setTitle("Ver Menú");
+        DeleteMenu.setScene(scene);
+        DeleteMenu.show();
+        Stage stage = (Stage) verButton.getScene().getWindow();
+        stage.close();
 
     }
 
     @FXML
     void initialize() {
-        assert agregarButton != null : "fx:id=\"agregarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
-        assert eliminarButton != null : "fx:id=\"eliminarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
-        assert modificarButton != null : "fx:id=\"modificarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
-        assert regresarButton != null : "fx:id=\"regresarButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
-        assert verButton != null : "fx:id=\"verButton\" was not injected: check your FXML file 'MenuInterfaz-view.fxml'.";
-
     }
 
 }

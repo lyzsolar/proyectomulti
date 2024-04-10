@@ -50,7 +50,7 @@ public class ProductoInterfazController {
         AddProducto.setTitle("Submenú Agregar Producto");
         AddProducto.setScene(scene);
         AddProducto.show();
-        Stage stage = (Stage) regresarButton.getScene().getWindow();
+        Stage stage = (Stage) agregarButton.getScene().getWindow();
         stage.close();
     }
 
@@ -72,7 +72,7 @@ public class ProductoInterfazController {
         DeleteProducto.setTitle("Submenú Eliminar Producto");
         DeleteProducto.setScene(scene);
         DeleteProducto.show();
-        Stage stage = (Stage) eliminarButton.getScene().getWindow();
+        Stage stage = (Stage) modificarButton.getScene().getWindow();
         stage.close();
     }
 
@@ -106,7 +106,7 @@ public class ProductoInterfazController {
         vistaMenuAdministrador.setTitle("Menu Administrador");
         vistaMenuAdministrador.setScene(scene);
         vistaMenuAdministrador.show();
-        Stage stage = (Stage) regresarIcono.getScene().getWindow();
+        Stage stage = (Stage) verButton.getScene().getWindow();
         stage.close();
     }
 
